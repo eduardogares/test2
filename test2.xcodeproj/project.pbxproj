@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7EBBAA9C1F69F5F000DC825B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBAA9B1F69F5F000DC825B /* main.m */; };
 		7EBBAA9F1F69F5F000DC825B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBAA9E1F69F5F000DC825B /* AppDelegate.m */; };
-		7EBBAAA21F69F5F000DC825B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBAAA11F69F5F000DC825B /* ViewController.m */; };
+		7EBBAAA21F69F5F000DC825B /* Home.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBAAA11F69F5F000DC825B /* Home.m */; };
 		7EBBAAA51F69F5F000DC825B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBAAA31F69F5F000DC825B /* Main.storyboard */; };
 		7EBBAAA81F69F5F000DC825B /* test2.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7EBBAAA61F69F5F000DC825B /* test2.xcdatamodeld */; };
 		7EBBAAAA1F69F5F000DC825B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7EBBAAA91F69F5F000DC825B /* Assets.xcassets */; };
@@ -21,8 +21,8 @@
 		7EBBAA9B1F69F5F000DC825B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		7EBBAA9D1F69F5F000DC825B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		7EBBAA9E1F69F5F000DC825B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		7EBBAAA01F69F5F000DC825B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		7EBBAAA11F69F5F000DC825B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		7EBBAAA01F69F5F000DC825B /* Home.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Home.h; sourceTree = "<group>"; };
+		7EBBAAA11F69F5F000DC825B /* Home.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Home.m; sourceTree = "<group>"; };
 		7EBBAAA41F69F5F000DC825B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7EBBAAA71F69F5F000DC825B /* test2.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = test2.xcdatamodel; sourceTree = "<group>"; };
 		7EBBAAA91F69F5F000DC825B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,10 +60,8 @@
 		7EBBAA991F69F5F000DC825B /* test2 */ = {
 			isa = PBXGroup;
 			children = (
-				7EBBAA9D1F69F5F000DC825B /* AppDelegate.h */,
-				7EBBAA9E1F69F5F000DC825B /* AppDelegate.m */,
-				7EBBAAA01F69F5F000DC825B /* ViewController.h */,
-				7EBBAAA11F69F5F000DC825B /* ViewController.m */,
+				7EBBAAB51F69F7CC00DC825B /* Controller */,
+				7EBBAAB41F69F79800DC825B /* Main */,
 				7EBBAAA31F69F5F000DC825B /* Main.storyboard */,
 				7EBBAAA91F69F5F000DC825B /* Assets.xcassets */,
 				7EBBAAAB1F69F5F000DC825B /* LaunchScreen.storyboard */,
@@ -80,6 +78,24 @@
 				7EBBAA9B1F69F5F000DC825B /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7EBBAAB41F69F79800DC825B /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				7EBBAA9D1F69F5F000DC825B /* AppDelegate.h */,
+				7EBBAA9E1F69F5F000DC825B /* AppDelegate.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		7EBBAAB51F69F7CC00DC825B /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				7EBBAAA01F69F5F000DC825B /* Home.h */,
+				7EBBAAA11F69F5F000DC825B /* Home.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,7 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7EBBAAA81F69F5F000DC825B /* test2.xcdatamodeld in Sources */,
-				7EBBAAA21F69F5F000DC825B /* ViewController.m in Sources */,
+				7EBBAAA21F69F5F000DC825B /* Home.m in Sources */,
 				7EBBAA9F1F69F5F000DC825B /* AppDelegate.m in Sources */,
 				7EBBAA9C1F69F5F000DC825B /* main.m in Sources */,
 			);
