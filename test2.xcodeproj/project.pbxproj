@@ -60,8 +60,8 @@
 		7EBBAA991F69F5F000DC825B /* test2 */ = {
 			isa = PBXGroup;
 			children = (
-				7EBBAAB51F69F7CC00DC825B /* Controller */,
 				7EBBAAB41F69F79800DC825B /* Main */,
+				7EBBAAB51F69F7CC00DC825B /* Controller */,
 				7EBBAAA31F69F5F000DC825B /* Main.storyboard */,
 				7EBBAAA91F69F5F000DC825B /* Assets.xcassets */,
 				7EBBAAAB1F69F5F000DC825B /* LaunchScreen.storyboard */,
@@ -329,6 +329,7 @@
 				7EBBAAB31F69F5F000DC825B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
