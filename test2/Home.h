@@ -20,6 +20,7 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfRed;
 @property (weak, nonatomic) IBOutlet UITextField *tfGreen;
 @property (weak, nonatomic) IBOutlet UITextField *tfBlue;
+@property (weak, nonatomic) IBOutlet UIButton *btnRandom;
 
 
 @end

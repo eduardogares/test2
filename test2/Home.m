@@ -114,18 +114,55 @@ float blueValue=0;
         NSLog(@"its on!");
         self.lblCirculo.textColor =
         [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
+        
+        self.slRed.enabled=true;
+        self.slGreen.enabled=true;
+        self.slBlue.enabled=true;
+        
+        self.btnRandom.enabled=true;
+        
     } else {
         NSLog(@"its off!");
         self.lblCirculo.textColor =
         [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha:1.0];
+        
+        self.slRed.enabled      =false;
+        self.slGreen.enabled    =false;
+        self.slBlue.enabled     =false;
+        
+        self.btnRandom.enabled=false;
     }
+}
+
+- (IBAction)btnRandomAction:(id)sender {
+    
+    redValue=arc4random()%256;
+    greenValue=arc4random()%256;
+    blueValue=arc4random()%256;
     
     
+    self.slRed.value=redValue;
+    self.slGreen.value=greenValue;
+    self.slBlue.value=blueValue;
+    
+    int value = (int)(self.slRed.value);
+    self.tfRed.text=[NSString stringWithFormat:@"%i",value];
+    
+    value = (int)(self.slGreen.value);
+    self.tfGreen.text=[NSString stringWithFormat:@"%i",value];
+    
+    value = (int)(self.slBlue.value);
+    self.tfBlue.text=[NSString stringWithFormat:@"%i",value];
+    
+    redValue=redValue/255;
+    greenValue=greenValue/255;
+    blueValue=blueValue/255;
+    
+    self.lblCirculo.textColor =
+    [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
     
 }
-
-
 
 
 - (void)didReceiveMemoryWarning {
