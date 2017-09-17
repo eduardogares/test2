@@ -27,7 +27,7 @@ int state=1;
     NSString *textoParaMostrar;
     
     if(state==0){
-        textoParaMostrar = @"the time is .. tap again";
+        textoParaMostrar = @"Y la nueva hora es !!";
         
         self.lblBotonsito.textColor = [UIColor greenColor];
     }
@@ -40,22 +40,22 @@ int state=1;
     }
     else if(state==2)  {
         self.lblBotonsito.textColor = [UIColor blueColor];
-        textoParaMostrar = @"and the date is .. try again";
+        textoParaMostrar = @"y la fecha es !!!";
     }
     else if(state==3)  {
-        self.lblBotonsito.textColor = [UIColor yellowColor];
+        self.lblBotonsito.textColor = [UIColor purpleColor];
         NSDateFormatter *dayStamp = [[NSDateFormatter alloc] init];
         [dayStamp setDateFormat:@"dd-MM-yyyy"];
         
         textoParaMostrar = [dayStamp stringFromDate:currentDate];
     }
     else if(state==4)  {
-        self.lblBotonsito.textColor = [UIColor blackColor];
+        self.lblBotonsito.textColor = [UIColor orangeColor];
         NSDateFormatter *wholeDate = [[NSDateFormatter alloc] init];
         [wholeDate setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
         
         textoParaMostrar =[wholeDate stringFromDate:currentDate];
-        textoParaMostrar =[textoParaMostrar stringByAppendingString:@"= fecha y hora !"];
+        textoParaMostrar =[textoParaMostrar stringByAppendingString:@" = fecha y hora !"];
         
         state=-1;
     }
@@ -71,7 +71,7 @@ float blueValue=0;
 
 - (IBAction)updateRed:(id)sender {
     int value = (int)(self.slRed.value);
-    self.tfRed.text=[NSString stringWithFormat:@"%i",value];
+    self.lblRed.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     redValue=self.slRed.value/255;
     
@@ -80,10 +80,13 @@ float blueValue=0;
     self.lblCirculo.textColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
+    self.lblRed.textColor =
+    [[UIColor alloc] initWithRed:redValue green:0 blue:0 alpha:1.0];
+    
 }
 - (IBAction)updateGreen:(id)sender {
     int value = (int)(self.slGreen.value);
-    self.tfGreen.text=[NSString stringWithFormat:@"%i",value];
+    self.lblGreen.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     greenValue=self.slGreen.value/255;
     //self.tfGreen.text=[NSString stringWithFormat:@"%f",greenValue];
@@ -91,12 +94,13 @@ float blueValue=0;
     self.lblCirculo.textColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
-    
+    self.lblGreen.textColor =
+    [[UIColor alloc] initWithRed:0 green:greenValue blue:0 alpha:1.0];
 }
 - (IBAction)updateBlue:(id)sender {
     
     int value = (int)(self.slBlue.value);
-    self.tfBlue.text=[NSString stringWithFormat:@"%i",value];
+    self.lblBlue.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     blueValue=self.slBlue.value/255;
     //self.tfBlue.text=[NSString stringWithFormat:@"%f",blueValue];
@@ -104,6 +108,9 @@ float blueValue=0;
     
     self.lblCirculo.textColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
+    
+    self.lblBlue.textColor =
+    [[UIColor alloc] initWithRed:0 green:0 blue:blueValue alpha:1.0];
 }
 
 - (IBAction)changeSwitchState:(id)sender {
@@ -143,13 +150,13 @@ float blueValue=0;
     self.slBlue.value=blueValue;
     
     int value = (int)(self.slRed.value);
-    self.tfRed.text=[NSString stringWithFormat:@"%i",value];
+    self.lblRed.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     value = (int)(self.slGreen.value);
-    self.tfGreen.text=[NSString stringWithFormat:@"%i",value];
+    self.lblGreen.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     value = (int)(self.slBlue.value);
-    self.tfBlue.text=[NSString stringWithFormat:@"%i",value];
+    self.lblBlue.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
     
     redValue=redValue/255;
     greenValue=greenValue/255;
@@ -157,6 +164,14 @@ float blueValue=0;
     
     self.lblCirculo.textColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
+    
+    self.lblRed.textColor =
+    [[UIColor alloc] initWithRed:redValue green:0 blue:0 alpha:1.0];
+    self.lblGreen.textColor =
+    [[UIColor alloc] initWithRed:0 green:greenValue blue:0 alpha:1.0];
+    self.lblBlue.textColor =
+    [[UIColor alloc] initWithRed:0 green:0 blue:blueValue alpha:1.0];
+    
 }
 
 - (IBAction)btnAlertAction:(id)sender {
@@ -170,9 +185,7 @@ float blueValue=0;
         texto =[texto stringByAppendingString:self.tfPhoneAlert.text];
         texto =[texto stringByAppendingFormat:@"] el color RGB es :0x%02x,%02x,%02x",
                 (int)self.slRed.value,(int)self.slGreen.value,(int)self.slBlue.value];
-        
-        
-        
+
     } else {
         texto=@"no hay color para mostrar !!";
     }

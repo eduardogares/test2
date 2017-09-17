@@ -17,29 +17,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="the time is ... tap again !!!" textAlignment="center" lineBreakMode="tailTruncation" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="bGm-6E-GlE" userLabel="Label">
-                                <rect key="frame" x="16" y="29" width="343" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Y la hora es !!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" id="bGm-6E-GlE" userLabel="Label">
+                                <rect key="frame" x="185" y="20" width="174" height="109"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
                                 <color key="textColor" red="0.19926593200000001" green="0.49730812819999998" blue="0.49460279779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="G3y-Iv-2nZ" userLabel="L1">
-                                <rect key="frame" x="87" y="65" width="200" height="64"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.34248146801276397" green="0.61670174870466321" blue="0.59489447615347268" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" red="0.19926593204409154" green="0.49730812823834192" blue="0.49460279781220767" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                                <color key="shadowColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hXH-eU-p7v" userLabel="B1">
-                                <rect key="frame" x="87" y="65" width="200" height="64"/>
+                                <rect key="frame" x="16" y="41" width="154" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <state key="normal" title="Botonsito !!"/>
+                                <state key="normal" title="Hora y Fecha"/>
                                 <connections>
                                     <action selector="botonsito:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KC5-q1-Co5"/>
                                 </connections>
@@ -70,51 +61,26 @@
                                 </connections>
                             </button>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" id="EJl-pd-gcA">
-                                <rect key="frame" x="14" y="195" width="229" height="31"/>
+                                <rect key="frame" x="14" y="195" width="209" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="updateRed:" destination="BYZ-38-t0r" eventType="valueChanged" id="utr-KV-0v2"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" id="XRz-SA-L13">
-                                <rect key="frame" x="14" y="233" width="229" height="31"/>
+                                <rect key="frame" x="14" y="233" width="209" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="updateGreen:" destination="BYZ-38-t0r" eventType="valueChanged" id="LVr-SC-Rlp"/>
                                 </connections>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="255" id="y8E-Qc-gYF">
-                                <rect key="frame" x="14" y="271" width="229" height="31"/>
+                                <rect key="frame" x="14" y="271" width="209" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="updateBlue:" destination="BYZ-38-t0r" eventType="valueChanged" id="K6o-NK-ZkB"/>
                                 </connections>
                             </slider>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="kwO-kx-6uj">
-                                <rect key="frame" x="293" y="195" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                <connections>
-                                    <action selector="modifyTextRed:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="f9P-1J-ylZ"/>
-                                    <action selector="redWasModified:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="FuT-PK-XuX"/>
-                                </connections>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="pet-Gf-DVu">
-                                <rect key="frame" x="293" y="233" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" id="INy-0P-Pc5">
-                                <rect key="frame" x="293" y="271" width="66" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="•" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LB9-Xg-uEU" userLabel="Circulo">
                                 <rect key="frame" x="114" y="309" width="147" height="108"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
@@ -171,22 +137,43 @@
                                     <action selector="btnAlertAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="RzP-mM-U5Q"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 [0x00]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="2D1-RN-XXo">
+                                <rect key="frame" x="229" y="195" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 [0x00]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3zY-wd-Qk8">
+                                <rect key="frame" x="229" y="233" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="0 [0x00]" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ICY-IM-lVs">
+                                <rect key="frame" x="229" y="271" width="130" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
                     <connections>
                         <outlet property="btnRandom" destination="Eqf-Yl-tmM" id="nk1-Dg-90m"/>
+                        <outlet property="lblBlue" destination="ICY-IM-lVs" id="Xef-I1-bL4"/>
                         <outlet property="lblBotonsito" destination="bGm-6E-GlE" id="vlq-7s-n8s"/>
                         <outlet property="lblCirculo" destination="LB9-Xg-uEU" id="foh-7A-Ty3"/>
+                        <outlet property="lblGreen" destination="3zY-wd-Qk8" id="09a-Pb-CUv"/>
+                        <outlet property="lblRed" destination="2D1-RN-XXo" id="bEm-uM-MRN"/>
                         <outlet property="slBlue" destination="y8E-Qc-gYF" id="aSs-RV-9JD"/>
                         <outlet property="slGreen" destination="XRz-SA-L13" id="QZ8-jq-sTT"/>
                         <outlet property="slRed" destination="EJl-pd-gcA" id="X6i-xD-tLl"/>
                         <outlet property="switchOnOff" destination="Szm-5E-EU2" id="KOh-XP-RIP"/>
-                        <outlet property="tfBlue" destination="INy-0P-Pc5" id="d8L-Al-7Ng"/>
-                        <outlet property="tfGreen" destination="pet-Gf-DVu" id="tAv-h4-C8H"/>
                         <outlet property="tfNameAlert" destination="V7k-XE-dCI" id="ViT-gm-jbs"/>
                         <outlet property="tfPhoneAlert" destination="tDf-5y-rCc" id="qBs-ad-ZFQ"/>
-                        <outlet property="tfRed" destination="kwO-kx-6uj" id="KUL-hw-JXF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
