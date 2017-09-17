@@ -55,7 +55,7 @@ int state=1;
         [wholeDate setDateFormat:@"dd-MM-yyyy HH:mm:ss"];
         
         textoParaMostrar =[wholeDate stringFromDate:currentDate];
-        textoParaMostrar =[textoParaMostrar stringByAppendingString:@" es la fecha"];
+        textoParaMostrar =[textoParaMostrar stringByAppendingString:@"= fecha y hora !"];
         
         state=-1;
     }
@@ -107,9 +107,6 @@ float blueValue=0;
 }
 
 - (IBAction)changeSwitchState:(id)sender {
-    
-    
-    
     if ([self.switchOnOff isOn]) {
         NSLog(@"its on!");
         self.lblCirculo.textColor =
@@ -160,9 +157,42 @@ float blueValue=0;
     
     self.lblCirculo.textColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
+}
+
+- (IBAction)btnAlertAction:(id)sender {
     
+    NSString *texto;
+    
+    if ([self.switchOnOff isOn]) {
+        texto=@"nombre [";
+        texto =[texto stringByAppendingString:self.tfNameAlert.text];
+        texto =[texto stringByAppendingString:@"] telefono ["];
+        texto =[texto stringByAppendingString:self.tfPhoneAlert.text];
+        texto =[texto stringByAppendingFormat:@"] el color RGB es :0x%02x,%02x,%02x",
+                (int)self.slRed.value,(int)self.slGreen.value,(int)self.slBlue.value];
+        
+        
+        
+    } else {
+        texto=@"no hay color para mostrar !!";
+    }
+    
+    
+    
+    
+    UIAlertController* alert = [UIAlertController alertControllerWithTitle:@"Color del circulo !!"
+                                                                   message:texto
+                                                            preferredStyle:UIAlertControllerStyleAlert];
+    
+    UIAlertAction* defaultAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault
+                                                          handler:^(UIAlertAction * action) {}];
+    
+    [alert addAction:defaultAction];
+    [self presentViewController:alert animated:YES completion:nil];
     
 }
+
+
 
 
 - (void)didReceiveMemoryWarning {

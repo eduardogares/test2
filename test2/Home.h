@@ -22,6 +22,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *tfBlue;
 @property (weak, nonatomic) IBOutlet UIButton *btnRandom;
 
+@property (weak, nonatomic) IBOutlet UITextField *tfNameAlert;
+@property (weak, nonatomic) IBOutlet UITextField *tfPhoneAlert;
 
 @end
 
