@@ -19,6 +19,12 @@ int state=1;
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //self.profileImageView.layer.cornerRadius = self.profileImageView.frame.size.width / 2;
+    //self.profileImageView.clipsToBounds = YES;
+    
+    self.lblCirculo.layer.cornerRadius = self.lblCirculo.frame.size.width / 2;
+    self.lblCirculo.clipsToBounds = YES;
+    self.lblCirculo.backgroundColor =[UIColor blackColor];
     
 }
 - (IBAction)botonsito:(id)sender {
@@ -71,13 +77,14 @@ float blueValue=0;
 
 - (IBAction)updateRed:(id)sender {
     int value = (int)(self.slRed.value);
-    self.lblRed.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblRed.text=[NSString stringWithFormat:@"%i ",value];
     
     redValue=self.slRed.value/255;
     
     //self.tfRed.text=[NSString stringWithFormat:@"%f",redValue];
     
-    self.lblCirculo.textColor =
+    //self.lblCirculo.textColor =
+    self.lblCirculo.backgroundColor=
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
     self.lblRed.textColor =
@@ -86,12 +93,12 @@ float blueValue=0;
 }
 - (IBAction)updateGreen:(id)sender {
     int value = (int)(self.slGreen.value);
-    self.lblGreen.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblGreen.text=[NSString stringWithFormat:@"%i ",value];
     
     greenValue=self.slGreen.value/255;
     //self.tfGreen.text=[NSString stringWithFormat:@"%f",greenValue];
     
-    self.lblCirculo.textColor =
+    self.lblCirculo.backgroundColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
     self.lblGreen.textColor =
@@ -100,13 +107,13 @@ float blueValue=0;
 - (IBAction)updateBlue:(id)sender {
     
     int value = (int)(self.slBlue.value);
-    self.lblBlue.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblBlue.text=[NSString stringWithFormat:@"%i ",value];
     
     blueValue=self.slBlue.value/255;
     //self.tfBlue.text=[NSString stringWithFormat:@"%f",blueValue];
     
     
-    self.lblCirculo.textColor =
+    self.lblCirculo.backgroundColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
     self.lblBlue.textColor =
@@ -116,7 +123,7 @@ float blueValue=0;
 - (IBAction)changeSwitchState:(id)sender {
     if ([self.switchOnOff isOn]) {
         NSLog(@"its on!");
-        self.lblCirculo.textColor =
+        self.lblCirculo.backgroundColor =
         [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
         
         self.slRed.enabled=true;
@@ -127,7 +134,7 @@ float blueValue=0;
         
     } else {
         NSLog(@"its off!");
-        self.lblCirculo.textColor =
+        self.lblCirculo.backgroundColor =
         [[UIColor alloc] initWithRed:1 green:1 blue:1 alpha:1.0];
         
         self.slRed.enabled      =false;
@@ -150,19 +157,19 @@ float blueValue=0;
     self.slBlue.value=blueValue;
     
     int value = (int)(self.slRed.value);
-    self.lblRed.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblRed.text=[NSString stringWithFormat:@"%i ",value];
     
     value = (int)(self.slGreen.value);
-    self.lblGreen.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblGreen.text=[NSString stringWithFormat:@"%i ",value];
     
     value = (int)(self.slBlue.value);
-    self.lblBlue.text=[NSString stringWithFormat:@"%i [0x%02x]",value,value];
+    self.lblBlue.text=[NSString stringWithFormat:@"%i ",value];
     
     redValue=redValue/255;
     greenValue=greenValue/255;
     blueValue=blueValue/255;
     
-    self.lblCirculo.textColor =
+    self.lblCirculo.backgroundColor =
     [[UIColor alloc] initWithRed:redValue green:greenValue blue:blueValue alpha:1.0];
     
     self.lblRed.textColor =
